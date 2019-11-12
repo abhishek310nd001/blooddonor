@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+<html>
+    <body>
+        {% block data %}
+            <table align="center" border="1">
+                <form method="post">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Log in</button>
+                </form>
+            </table>
+        {% endblock %}
+
+    </body>
+</html>

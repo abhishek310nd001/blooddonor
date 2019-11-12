@@ -1,0 +1,58 @@
+{% extends 'base_layout.html' %}
+
+<html>
+    <head>
+        {% block heads %}
+            <style>
+                ul {
+                  list-style-type: none;
+                  margin: 0;
+                  padding: 0;
+                  width: 200px;
+                  background-color: #f1f1f1;
+                }
+
+                li a {
+                  display: block;
+                  color: #000;
+                  padding: 8px 16px;
+                  text-decoration: none;
+                }
+
+                /* Change the link color on hover */
+                li a:hover {
+                  background-color: #555;
+                  color: white;
+                }
+            </style>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block content %}
+
+
+            <div>
+            <table>
+                <tr><th align="left">
+                <nav>
+                        <ul>
+                          <li><a href="#find">Find</a></li>
+                            <br/>
+                          <li><a href="#donor">Donor</a></li>
+                          <li><a href="#blood bank">Blood Bank</a></li>
+                          <li><a href="#Hospital">Hospital</a></li>
+                          <li><a href="#clinic">Clinic</a></li>
+                        </ul>
+                </nav></th>
+
+
+            <th align="right">
+            {% block data %}
+
+            {% endblock %}
+            </th></tr></table>
+            </div>
+        {% endblock %}
+    </body>
+</html>

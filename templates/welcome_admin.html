@@ -1,0 +1,57 @@
+{% extends 'base_layout.html' %}
+<html>
+    <head>
+        {% block heads %}
+            <style>
+                ul {
+                  list-style-type: none;
+                  margin: 0;
+                  padding: 0;
+                  width: 200px;
+                  background-color: #f1f1f1;
+                }
+
+                li a {
+                  display: block;
+                  color: #000;
+                  padding: 8px 16px;
+                  text-decoration: none;
+                }
+
+                /* Change the link color on hover */
+                li a:hover {
+                  background-color: #555;
+                  color: white;
+                }
+            </style>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block content %}
+
+
+            <div>
+            <table>
+                <tr><th align="left">
+                <nav>
+                        <ul>
+                          <li><a href="#find">Find</a></li>
+                            <br/>
+                          <li><a href="#inbox">Inbox</a></li>
+                          <li><a href="#addstate">Add State</a></li>
+                          <li><a href="{% url 'addorganization' %}">Add Organization</a></li>
+                          <li><a href="#profile">Profile</a></li>
+                          <li><a href="#suggestion">Suggestion</a></li>
+                          <li><a href="{% url 'home' %}">Log Out</a></li>
+                        </ul>
+                </nav></th>
+
+
+            <th align="right">
+                Welcome
+            </th></tr></table>
+            </div>
+        {% endblock %}
+    </body>
+</html>
